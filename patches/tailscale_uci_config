@@ -1,0 +1,18 @@
+
+config tailscale 'settings'
+	option port '41641'
+	option config_path '/etc/tailscale'
+	option fw_mode 'iptables'
+	option log_stdout '1'
+	option log_stderr '1'
+	option accept_dns '1'
+	option accept_routes '0'
+	option advertise_exit_node '0'
+	list access 'ts_ac_lan'
+	list access 'ts_ac_wan'
+	list access 'lan_ac_ts'
+	option login_server 'https://YOUR_HEADSCALE_IP:PORT'
+	option authKey 'YOUR_AUTH_KEY'
+	list advertise_routes '192.168.8.0/24'
+	option enabled '1'
+
