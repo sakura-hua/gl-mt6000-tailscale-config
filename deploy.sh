@@ -2,10 +2,10 @@
 # GL.iNet MT6000 — 一键部署 luci-app-tailscale + 修复
 #
 # 用法（在路由器上直接跑）:
-#   wget -O- https://raw.githubusercontent.com/sakura-hua/gl-mt6000-tailscale-config/main/deploy.sh | sh
+#   wget -O- https://raw.githubusercontent.com/sakura-hua/luci-app-tailscale-fixes/main/deploy.sh | sh
 #
 
-REPO_BASE="https://raw.githubusercontent.com/sakura-hua/gl-mt6000-tailscale-config/main"
+REPO_BASE="https://raw.githubusercontent.com/sakura-hua/luci-app-tailscale-fixes/main"
 
 echo ""
 echo "=== 1/5 下载 luci-app-tailscale ==="

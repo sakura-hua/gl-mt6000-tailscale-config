@@ -9,7 +9,7 @@
 #   2. tailscale_helper 二进制硬编码 5s 超时 — 移动宽带延迟高必然失败
 #
 # 用法:
-#   wget -O- https://raw.githubusercontent.com/sakura-hua/gl-mt6000-tailscale-config/main/files/tailscale-init-fix.sh | sh
+#   wget -O- https://raw.githubusercontent.com/sakura-hua/luci-app-tailscale-fixes/main/files/tailscale-init-fix.sh | sh
 #
 
 set -e

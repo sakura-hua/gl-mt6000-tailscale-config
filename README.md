@@ -25,7 +25,7 @@ patches/
 在路由器上运行：
 
 ```bash
-wget -O- https://raw.githubusercontent.com/sakura-hua/gl-mt6000-tailscale-config/main/deploy.sh | sh
+wget -O- https://raw.githubusercontent.com/sakura-hua/luci-app-tailscale-fixes/main/deploy.sh | sh
 ```
 
 装完后填 authkey 并启动：
@@ -88,18 +88,18 @@ procd 将其判定为崩溃并无限重启。
 ```bash
 # 1. 从本仓库下载安装包
 wget -O /root/luci-app-tailscale.ipk \
-  https://raw.githubusercontent.com/sakura-hua/gl-mt6000-tailscale-config/main/files/luci-app-tailscale.ipk
+  https://raw.githubusercontent.com/sakura-hua/luci-app-tailscale-fixes/main/files/luci-app-tailscale.ipk
 wget -O /root/luci-i18n-tailscale-zh-cn.ipk \
-  https://raw.githubusercontent.com/sakura-hua/gl-mt6000-tailscale-config/main/files/luci-i18n-tailscale-zh-cn.ipk
+  https://raw.githubusercontent.com/sakura-hua/luci-app-tailscale-fixes/main/files/luci-i18n-tailscale-zh-cn.ipk
 opkg install --force-overwrite /root/luci-app-tailscale.ipk /root/luci-i18n-tailscale-zh-cn.ipk
 
 # 2. 打 init.d 补丁
 wget -O- \
-  https://raw.githubusercontent.com/sakura-hua/gl-mt6000-tailscale-config/main/files/tailscale-init-fix.sh | sh
+  https://raw.githubusercontent.com/sakura-hua/luci-app-tailscale-fixes/main/files/tailscale-init-fix.sh | sh
 
 # 3. 覆盖增强版接口页面
 wget -O /www/luci-static/resources/view/tailscale/interface.js \
-  https://raw.githubusercontent.com/sakura-hua/gl-mt6000-tailscale-config/main/files/www/luci-static/resources/view/tailscale/interface.js
+  https://raw.githubusercontent.com/sakura-hua/luci-app-tailscale-fixes/main/files/www/luci-static/resources/view/tailscale/interface.js
 
 # 4. 配置
 uci set tailscale.@tailscale[0].login_server='https://YOUR_HEADSCALE_IP:PORT'
@@ -119,7 +119,7 @@ uci commit tailscale
 | 路由器 | GL.iNet MT6000 (GL-MT6000) |
 | 固件 | OpenWrt 21.02-SNAPSHOT (GL Beta) |
 | Tailscale 包 | asvow 版 luci-app-tailscale v1.2.6 |
-|  Headscale | v0.28.0 @ YOUR_HEADSCALE_IP:PORT |
+| Headscale | v0.28.0 |
 
 ## Credits
 
